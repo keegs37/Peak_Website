@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEAK Internet | Business Services</title>
+    <meta name="description"
+        content="PEAK Internet's business internet services provide professional broadband solutions including blazing fast fiber internet or fixed wireless for your organization.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .page-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .services-overview {
+            padding: 80px 0;
+        }
+
+        .biz-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .biz-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .biz-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--color-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .biz-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .biz-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .biz-card-icon {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 24px;
+            background: rgba(16, 185, 129, 0.1);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-lg);
+            transition: var(--transition);
+        }
+
+        .biz-card:hover .biz-card-icon {
+            background: var(--color-primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .biz-card h3 {
+            font-size: 1.5rem;
+            color: var(--color-text-main);
+            margin-bottom: 16px;
+        }
+
+        .biz-card p {
+            color: var(--color-text-mute);
+            margin-bottom: 24px;
+            flex-grow: 1;
+            line-height: 1.7;
+        }
+
+        .biz-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: auto;
+            transition: var(--transition);
+        }
+
+        .biz-card-link:hover {
+            color: var(--color-primary-dark);
+            gap: 12px;
+        }
+
+        .cta-section {
+            background-color: var(--color-bg-mute);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-box {
+            background: white;
+            padding: 60px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--color-primary-dark);
+        }
+
+        .cta-phone {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            display: block;
+            margin: 30px 0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .cta-phone:hover {
+            color: var(--color-primary-dark);
+            transform: scale(1.02);
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 60px 0;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .cta-box {
+                padding: 40px 20px;
+            }
+
+            .cta-phone {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app-root">
+        <!-- Utility Bar -->
+        <div class="utility-bar">
+            <div class="container utility-content">
+                <div class="utility-left">
+                    <span><i class="ph ph-phone"></i> 24/7 Support: 541-754-PEAK (7325)</span>
+                </div>
+                <div class="utility-right">
+                    <a href="https://webmail.peak.org/" target="_blank"><i class="ph ph-envelope"></i> Web Mail</a>
+                    <a href="https://peak.smarthub.coop/Login.html" target="_blank"><i class="ph ph-user"></i> My
+                        Account</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <header class="main-header">
+            <div class="container header-content">
+                <a href="index.html" class="brand-logo">
+                    <span class="logo-peak">PEAK</span>
+                    <span class="logo-internet">INTERNET</span>
+                </a>
+
+                <nav class="main-nav">
+                    <a href="internet-plans.html" class="nav-link">Internet Plans</a>
+                    <a href="business.html" class="nav-link active" style="color: var(--color-primary);">Business</a>
+                    <a href="advanced-services.html" class="nav-link">TV & Voice</a>
+                    <a href="support.html" class="nav-link">Support</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="https://peak.smarthub.coop/Shop.html" target="_blank" class="btn btn-primary">Check
+                        Availability</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="container">
+                    <h1>Keeping You Connected</h1>
+                    <p>Keeping pace in today's business world requires reliable, high-speed broadband internet.
+                        Customize your professional solutions with PEAK's Fiber and Fixed Wireless options.</p>
+                </div>
+            </section>
+
+            <!-- Services Grid -->
+            <section class="services-overview">
+                <div class="container">
+                    <div class="section-header text-center animate-on-scroll">
+                        <h2>Business Internet Solutions</h2>
+                        <p style="max-width: 700px; margin: 0 auto;">Discover the difference that PEAK can make for your
+                            team's productivity. Offering everything from blazing fast gigabit Internet to PBX phone
+                            services.</p>
+                    </div>
+
+                    <div class="biz-services-grid">
+                        <!-- Advanced Internet -->
+                        <div class="biz-card animate-on-scroll">
+                            <div class="biz-card-icon"><i class="ph ph-globe"></i></div>
+                            <h3>Advanced Internet</h3>
+                            <p>Fully customized professional Internet solutions including shared fiber or dedicated
+                                fiber connections tailored to the specific size and requirements of your organization.
+                            </p>
+                            <a href="biz-advanced-internet.html" class="biz-card-link">Learn More <i
+                                    class="ph ph-arrow-right"></i></a>
+                        </div>
+
+                        <!-- Fixed Wireless -->
+                        <div class="biz-card animate-on-scroll" style="transition-delay: 100ms;">
+                            <div class="biz-card-icon"><i class="ph ph-broadcast"></i></div>
+                            <h3>Fixed Wireless</h3>
+                            <p>Get the reliable broadband connection you need from a shared frequency to a
+                                fully-dedicated and licensed network anywhere in our robust coverage area.</p>
+                            <a href="biz-fixed-wireless.html" class="biz-card-link">Learn More <i
+                                    class="ph ph-arrow-right"></i></a>
+                        </div>
+
+                        <!-- Advanced Voice -->
+                        <div class="biz-card animate-on-scroll" style="transition-delay: 200ms;">
+                            <div class="biz-card-icon"><i class="ph ph-phone-call"></i></div>
+                            <h3>Advanced Voice</h3>
+                            <p>Crystal-clear, reliable, affordable IP telephone services for your organization. Take
+                                advantage of professional features including voicemail, call waiting, and more.</p>
+                            <a href="biz-advanced-voice.html" class="biz-card-link">Learn More <i
+                                    class="ph ph-arrow-right"></i></a>
+                        </div>
+
+                        <!-- Hosted PBX -->
+                        <div class="biz-card animate-on-scroll" style="transition-delay: 300ms;">
+                            <div class="biz-card-icon"><i class="ph ph-phone-list"></i></div>
+                            <h3>Hosted PBX Services</h3>
+                            <p>PEAK's hosted PBX boasts a full range of features to customize a state-of-the-art phone
+                                system that meets your modern business communications needs.</p>
+                            <a href="biz-hosted-pbx.html" class="biz-card-link">Learn More <i
+                                    class="ph ph-arrow-right"></i></a>
+                        </div>
+
+                        <!-- Carrier Services -->
+                        <div class="biz-card animate-on-scroll" style="transition-delay: 400ms;">
+                            <div class="biz-card-icon"><i class="ph ph-buildings"></i></div>
+                            <h3>Carrier Services</h3>
+                            <p>Enterprise connectivity for multiple locations using our robust network. Options include
+                                Dedicated Internet Access (DIA), Ethernet Transport, and Circuit Leases.</p>
+                            <a href="biz-carrier-services.html" class="biz-card-link">Learn More <i
+                                    class="ph ph-arrow-right"></i></a>
+                        </div>
+
+                        <!-- Colocation -->
+                        <div class="biz-card animate-on-scroll" style="transition-delay: 500ms;">
+                            <div class="biz-card-icon"><i class="ph ph-server"></i></div>
+                            <h3>Server Colocation</h3>
+                            <p>System security and continuous connectivity for your mission-critical applications in our
+                                fully redundant facility with instant scalability capabilities.</p>
+                            <a href="biz-colocation.html" class="biz-card-link">Learn More <i
+                                    class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section animate-on-scroll">
+                <div class="container">
+                    <div class="cta-box">
+                        <h2>Get PEAK Business Solutions Today!</h2>
+                        <p>Call to receive a customized business needs assessment. Or fill out our form and our
+                            enterprise team will reach out directly to build your solution.</p>
+
+                        <a href="tel:541-754-7325" class="cta-phone">541-754-7325</a>
+
+                        <a href="mailto:info@peakinternet.com" class="btn btn-primary"
+                            style="padding: 16px 32px; font-size: 1.125rem; display: inline-flex;">Request Custom
+                            Quote</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo footer-logo">
+                        <span class="logo-peak">PEAK</span>
+                        <span class="logo-internet">INTERNET</span>
+                    </a>
+                    <p>Demand PEAK performance. Delivering reliable gigabit internet to the Willamette Valley since
+                        1999.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Services</h4>
+                        <a href="internet-plans.html#fiber">PEAK Fiber</a>
+                        <a href="internet-plans.html#wireless">Fixed Wireless</a>
+                        <a href="advanced-services.html#wifi">Total Home Wi-Fi</a>
+                        <a href="advanced-services.html#tv">Streaming TV</a>
+                        <a href="business.html">Business Internet</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="support.html">Contact Us</a>
+                        <a href="https://peak.smarthub.coop/Login.html" target="_blank">Pay My Bill</a>
+                        <a href="http://speedtest.peakinternet.com:7076/" target="_blank">Check Speed</a>
+                        <a href="financial-assistance.html">Financial Assistance</a>
+                        <a href="support.html">Tech Support</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="about.html">Our Mission</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="news.html">News</a>
+                        <a href="disclosures.html">Disclosures</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <p>&copy; 2026 PEAK Internet. All rights reserved.</p>
+                <div class="bottom-links">
+                    <a href="disclosures.html">Privacy Policy</a>
+                    <a href="disclosures.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

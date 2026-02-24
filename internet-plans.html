@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEAK Internet | Internet Plans</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .page-header {
+            background-color: var(--color-primary-dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+        }
+
+        .plan-details-section {
+            padding: 80px 0;
+        }
+
+        .plan-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .plan-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .plan-info {
+            flex: 1;
+        }
+
+        .plan-info h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary-dark);
+            margin-bottom: 24px;
+        }
+
+        .plan-info p {
+            font-size: 1.125rem;
+            color: var(--color-text-mute);
+            margin-bottom: 24px;
+        }
+
+        .plan-image {
+            flex: 1;
+            background-color: var(--color-bg-mute);
+            border-radius: var(--radius-lg);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .plan-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .plan-row:hover .plan-image img {
+            transform: scale(1.05);
+        }
+
+        .plan-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric {
+            background: rgba(16, 185, 129, 0.05);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .metric h4 {
+            color: var(--color-primary-dark);
+            font-size: 1.25rem;
+            margin-bottom: 4px;
+        }
+
+        .metric span {
+            color: var(--color-text-mute);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .plan-row,
+            .plan-row:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .plan-image {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app-root">
+        <!-- Utility Bar -->
+        <div class="utility-bar">
+            <div class="container utility-content">
+                <div class="utility-left">
+                    <span><i class="ph ph-phone"></i> 24/7 Support: 541-754-PEAK (7325)</span>
+                </div>
+                <div class="utility-right">
+                    <a href="https://webmail.peak.org/" target="_blank"><i class="ph ph-envelope"></i> Web Mail</a>
+                    <a href="https://peak.smarthub.coop/Login.html" target="_blank"><i class="ph ph-user"></i> My Account</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <header class="main-header">
+            <div class="container header-content">
+                <a href="index.html" class="brand-logo">
+                    <span class="logo-peak">PEAK</span>
+                    <span class="logo-internet">INTERNET</span>
+                </a>
+
+                <nav class="main-nav">
+                    <a href="internet-plans.html" class="nav-link active" style="color: var(--color-primary);">Internet
+                        Plans</a>
+                    <a href="advanced-services.html" class="nav-link">TV & Voice</a>
+                    <a href="support.html" class="nav-link">Support</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="https://peak.smarthub.coop/Shop.html" target="_blank" class="btn btn-primary">Check Availability</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="container">
+                    <h1>Internet Plans</h1>
+                    <p>Find the perfect speed for your home in the Mid-Willamette Valley.</p>
+                </div>
+            </section>
+
+            <section class="plan-details-section">
+                <div class="container">
+                    <!-- Fiber -->
+                    <div class="plan-row animate-on-scroll" id="fiber">
+                        <div class="plan-info">
+                            <div class="badge"><i class="ph-fill ph-lightning"></i> Most Reliable</div>
+                            <h2>PEAK Fiber</h2>
+                            <p>PEAK is building Fiber in East Linn county in the communities of Lebanon and Albany,
+                                bringing you incredibly fast, symmetrical speeds up to 1GIG and beyond.</p>
+
+                            <div class="plan-metrics">
+                                <div class="metric">
+                                    <h4>100Mbps - 1Gig</h4>
+                                    <span>Symmetrical Speeds</span>
+                                </div>
+                                <div class="metric">
+                                    <h4>Unlimited</h4>
+                                    <span>No Data Caps</span>
+                                </div>
+                            </div>
+
+                            <ul class="plan-features" style="margin-bottom: 30px;">
+                                <li><i class="ph-fill ph-check-circle"></i> Unaffected by weather conditions</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Best for 4K streaming and competitive gaming
+                                </li>
+                                <li><i class="ph-fill ph-check-circle"></i> Total Home Standard Wi-Fi included</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Price for Life Guarantee eligible</li>
+                            </ul>
+
+                            <button class="btn btn-primary">Check Fiber Availability</button>
+                        </div>
+                        <div class="plan-image">
+                            <img src="assets/fiber.png" alt="Family enjoying high-speed fiber internet in a smart home">
+                        </div>
+                    </div>
+
+                    <!-- Fixed Wireless -->
+                    <div class="plan-row animate-on-scroll" id="wireless">
+                        <div class="plan-info">
+                            <div class="badge" style="background-color: var(--color-text-mute); color: white;"><i
+                                    class="ph-fill ph-wifi-high"></i> Widest Coverage</div>
+                            <h2>Fixed Wireless</h2>
+                            <p>Even in remote areas of the Mid-Willamette Valley, PEAK Fixed Wireless can bring you
+                                reliable speeds. We pride ourselves on serving underserved areas in Linn, Lane, Benton,
+                                Polk, and Marion counties.</p>
+
+                            <div class="plan-metrics">
+                                <div class="metric">
+                                    <h4>3Mbps - 30Mbps</h4>
+                                    <span>Dependable Speeds</span>
+                                </div>
+                                <div class="metric">
+                                    <h4>Unlimited</h4>
+                                    <span>No Data Caps</span>
+                                </div>
+                            </div>
+
+                            <ul class="plan-features" style="margin-bottom: 30px;">
+                                <li><i class="ph-fill ph-check-circle"></i> Rapid deployment and installation</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Reaches rural areas where fiber hasn't gone
+                                    yet</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Total Home Standard Wi-Fi included</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Price for Life Guarantee eligible</li>
+                            </ul>
+
+                            <button class="btn btn-outline dark">See Wireless Availability</button>
+                        </div>
+                        <div class="plan-image">
+                            <img src="assets/wireless.png"
+                                alt="A modern rural home with fixed wireless internet capability">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo footer-logo">
+                        <span class="logo-peak">PEAK</span>
+                        <span class="logo-internet">INTERNET</span>
+                    </a>
+                    <p>Demand PEAK performance. Delivering reliable gigabit internet to the Willamette Valley since
+                        1999.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Services</h4>
+                        <a href="internet-plans.html#fiber">PEAK Fiber</a>
+                        <a href="internet-plans.html#wireless">Fixed Wireless</a>
+                        <a href="advanced-services.html#wifi">Total Home Wi-Fi</a>
+                        <a href="advanced-services.html#tv">Streaming TV</a>
+                        <a href="business.html">Business Internet</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="support.html">Contact Us</a>
+                        <a href="https://peak.smarthub.coop/Login.html" target="_blank">Pay My Bill</a>
+                        <a href="http://speedtest.peakinternet.com:7076/" target="_blank">Check Speed</a>
+                        <a href="financial-assistance.html">Financial Assistance</a>
+                        <a href="support.html">Tech Support</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="about.html">Our Mission</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="news.html">News</a>
+                        <a href="disclosures.html">Disclosures</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <p>&copy; 2026 PEAK Internet. All rights reserved.</p>
+                <div class="bottom-links">
+                    <a href="disclosures.html">Privacy Policy</a>
+                    <a href="disclosures.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEAK Internet | Total Home Wi-Fi</title>
+    <meta name="description"
+        content="Learn about PEAK Internet's mission, values, and our commitment to providing the best gigabit and fixed wireless internet in the Mid-Willamette Valley.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .page-header {
+            background-color: var(--color-primary-dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+        }
+
+        .about-section {
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary-dark);
+            margin-bottom: 24px;
+        }
+
+        .about-content p {
+            font-size: 1.125rem;
+            color: var(--color-text-mute);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            background-color: var(--color-bg-mute);
+            border-radius: var(--radius-lg);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-image i {
+            font-size: 10rem;
+            color: var(--color-primary);
+            opacity: 0.1;
+        }
+
+        .core-values {
+            background-color: var(--color-bg-mute);
+            padding: 80px 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 24px;
+            transition: var(--transition);
+        }
+
+        .value-card:hover .value-icon {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            color: var(--color-primary-dark);
+            margin-bottom: 16px;
+        }
+
+        .value-card p {
+            color: var(--color-text-mute);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 300px;
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app-root">
+        <!-- Utility Bar -->
+        <div class="utility-bar">
+            <div class="container utility-content">
+                <div class="utility-left">
+                    <span><i class="ph ph-phone"></i> 24/7 Support: 541-754-PEAK (7325)</span>
+                </div>
+                <div class="utility-right">
+                    <a href="https://webmail.peak.org/" target="_blank"><i class="ph ph-envelope"></i> Web Mail</a>
+                    <a href="https://peak.smarthub.coop/Login.html" target="_blank"><i class="ph ph-user"></i> My Account</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <header class="main-header">
+            <div class="container header-content">
+                <a href="index.html" class="brand-logo">
+                    <span class="logo-peak">PEAK</span>
+                    <span class="logo-internet">INTERNET</span>
+                </a>
+
+                <nav class="main-nav">
+                    <a href="internet-plans.html" class="nav-link">Internet Plans</a>
+                    <a href="advanced-services.html" class="nav-link">TV & Voice</a>
+                    <a href="support.html" class="nav-link">Support</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="https://peak.smarthub.coop/Shop.html" target="_blank" class="btn btn-primary">Check Availability</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="page-header" style="background-color: var(--color-primary-dark); color: white; padding: 100px 0; text-align: center;">
+                <div class="container">
+                    <h1 style="font-size: 3.5rem; margin-bottom: 24px; color: white;">Total Home Wi-Fi</h1>
+                    <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">Discover more about Total Home Wi-Fi and how it can benefit you.</p>
+                </div>
+            </section>
+            
+            <section class="content-section" style="padding: 80px 0;">
+                <div class="container" style="max-width: 800px;">
+                    <h2 class="animate-on-scroll" style="color: var(--color-primary-dark); margin-bottom: 20px;">PEAK Wi-Fi Solutions</h2>
+                    
+                    <h3 class="animate-on-scroll" style="color: var(--color-primary-dark); margin-bottom: 16px; margin-top: 32px; transition-delay: 50ms;">Total Home Standard</h3>
+                    <p class="animate-on-scroll" style="color: var(--color-text-mute); line-height: 1.8; margin-bottom: 20px; transition-delay: 100ms;">
+                        Included in all Internet Packages! Total Home Standard Wi-Fi equipment works perfectly with our Internet packages. Our professional installation team will connect the equipment and will design the best level of service possible in your home.
+                    </p>
+                    
+                    <h3 class="animate-on-scroll" style="color: var(--color-primary-dark); margin-bottom: 16px; margin-top: 32px; transition-delay: 150ms;">Total Home Premium Managed Wi-Fi</h3>
+                    <p class="animate-on-scroll" style="color: var(--color-text-mute); line-height: 1.8; margin-bottom: 20px; transition-delay: 200ms;">
+                        Multiple Devices. Multiple Streams. Uninterrupted Wi-Fi. It’s the ultimate in meshed Wi-Fi optimization and delivers a guaranteed “best level” signal to every corner of your home. Connect to everything the Internet has to offer with our Total Home Managed Wi-Fi platform. Manage your home Wi-Fi directly with the PEAKZone App!
+                    </p>
+
+                    <h3 class="animate-on-scroll" style="color: var(--color-primary-dark); margin-bottom: 16px; margin-top: 32px; transition-delay: 250ms;">Cutting Edge Equipment</h3>
+                     <ul class="animate-on-scroll" style="color: var(--color-text-mute); line-height: 1.8; margin-bottom: 20px; padding-left: 20px; transition-delay: 300ms;">
+                        <li><strong>HIGH Performance</strong> – dual band Wi-Fi 6 can blast the most Wi-Fi bandwidth to every area of your home.</li>
+                        <li><strong>Lightning Fast</strong> – no lag time or downtime with 8 streams of simultaneous data flow.</li>
+                        <li><strong>Secure Functionality</strong> – automatic software updates designed to ensure that you’re getting the most from PEAK Internet.</li>
+                    </ul>
+                </div>
+            </section>
+
+</main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo footer-logo">
+                        <span class="logo-peak">PEAK</span>
+                        <span class="logo-internet">INTERNET</span>
+                    </a>
+                    <p>Demand PEAK performance. Delivering reliable gigabit internet to the Willamette Valley since
+                        1999.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Services</h4>
+                        <a href="internet-plans.html#fiber">PEAK Fiber</a>
+                        <a href="internet-plans.html#wireless">Fixed Wireless</a>
+                        <a href="advanced-services.html#wifi">Total Home Wi-Fi</a>
+                        <a href="advanced-services.html#tv">Streaming TV</a>
+                        <a href="business.html">Business Internet</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="support.html">Contact Us</a>
+                        <a href="https://peak.smarthub.coop/Login.html" target="_blank">Pay My Bill</a>
+                        <a href="http://speedtest.peakinternet.com:7076/" target="_blank">Check Speed</a>
+                        <a href="financial-assistance.html">Financial Assistance</a>
+                        <a href="support.html">Tech Support</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="about.html">Our Mission</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="news.html">News</a>
+                        <a href="disclosures.html">Disclosures</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <p>&copy; 2026 PEAK Internet. All rights reserved.</p>
+                <div class="bottom-links">
+                    <a href="disclosures.html">Privacy Policy</a>
+                    <a href="disclosures.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

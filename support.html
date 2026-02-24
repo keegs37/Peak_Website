@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEAK Internet | Support & Contact</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .page-header {
+            background-color: var(--color-primary-dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+        }
+
+        .support-section {
+            padding: 80px 0;
+            display: flex;
+            gap: 60px;
+        }
+
+        .contact-card {
+            flex: 1;
+            background: var(--color-bg-surface);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-border);
+        }
+
+        .contact-card h2 {
+            font-size: 2rem;
+            color: var(--color-primary-dark);
+            margin-bottom: 24px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--color-bg-mute);
+        }
+
+        .contact-method:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-method i {
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+        }
+
+        .contact-method span {
+            display: block;
+            color: var(--color-text-main);
+            font-weight: 500;
+            font-size: 1.125rem;
+        }
+
+        .contact-method p {
+            color: var(--color-text-mute);
+            font-size: 0.875rem;
+        }
+
+        .quick-links-card {
+            flex: 1;
+        }
+
+        .quick-links-card h2 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .support-link-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px;
+            background: rgba(16, 185, 129, 0.05);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: var(--radius-sm);
+            color: var(--color-primary-dark);
+            font-weight: 600;
+            transition: all var(--transition-fast);
+        }
+
+        .support-link-btn i {
+            font-size: 1.5rem;
+        }
+
+        .support-link-btn:hover {
+            background: var(--color-primary-light);
+            color: white;
+            border-color: var(--color-primary-light);
+        }
+
+        @media (max-width: 768px) {
+            .support-section {
+                flex-direction: column;
+            }
+
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app-root">
+        <!-- Utility Bar -->
+        <div class="utility-bar">
+            <div class="container utility-content">
+                <div class="utility-left">
+                    <span><i class="ph ph-phone"></i> 24/7 Support: 541-754-PEAK (7325)</span>
+                </div>
+                <div class="utility-right">
+                    <a href="https://webmail.peak.org/" target="_blank"><i class="ph ph-envelope"></i> Web Mail</a>
+                    <a href="https://peak.smarthub.coop/Login.html" target="_blank"><i class="ph ph-user"></i> My Account</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <header class="main-header">
+            <div class="container header-content">
+                <a href="index.html" class="brand-logo">
+                    <span class="logo-peak">PEAK</span>
+                    <span class="logo-internet">INTERNET</span>
+                </a>
+
+                <nav class="main-nav">
+                    <a href="internet-plans.html" class="nav-link">Internet Plans</a>
+                    <a href="advanced-services.html" class="nav-link">TV & Voice</a>
+                    <a href="support.html" class="nav-link active" style="color: var(--color-primary);">Support</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="https://peak.smarthub.coop/Shop.html" target="_blank" class="btn btn-primary">Check Availability</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="container">
+                    <h1>We're Here to Help</h1>
+                    <p>24/7 technical support and customer service for all PEAK Internet customers.</p>
+                </div>
+            </section>
+
+            <section class="container animate-on-scroll">
+                <div class="support-section">
+                    <!-- Contact Info -->
+                    <div class="contact-card">
+                        <h2>Contact Information</h2>
+
+                        <div class="contact-method">
+                            <i class="ph-fill ph-phone-call"></i>
+                            <div>
+                                <span>541-754-PEAK (7325)</span>
+                                <p>24/7 Technical Support & Customer Care</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <i class="ph-fill ph-envelope-simple"></i>
+                            <div>
+                                <span>support@peakinternet.com</span>
+                                <p>Typical response time: 24-48 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <i class="ph-fill ph-map-pin"></i>
+                            <div>
+                                <span>Headquarters</span>
+                                <p>Willamette Valley, Oregon</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="quick-links-card">
+                        <h2>Support Resources</h2>
+                        <div class="links-grid">
+                            <a href="https://peak.smarthub.coop/Shop.html" target="_blank" class="support-link-btn">
+                                <i class="ph ph-credit-card"></i> Pay My Bill
+                            </a>
+                            <a href="http://speedtest.peakinternet.com:7076/" target="_blank" class="support-link-btn">
+                                <i class="ph ph-gauge"></i> Run Speed Test
+                            </a>
+                            <a href="https://www.peakinternet.com/residential/internet/fiberhood-watch/" target="_blank"
+                                class="support-link-btn">
+                                <i class="ph ph-binoculars"></i> Check My FiberHood
+                            </a>
+                            <a href="https://webmail.peak.org/" target="_blank" class="support-link-btn">
+                                <i class="ph ph-envelope"></i> Access Web Mail
+                            </a>
+                            <a href="https://www.peakinternet.com/financial-assistance/" target="_blank"
+                                class="support-link-btn">
+                                <i class="ph ph-hand-coins"></i> Financial Assistance
+                            </a>
+                            <a href="https://peak.ucvoiceportal.com/portal/" target="_blank" class="support-link-btn">
+                                <i class="ph ph-phone"></i> Phone Portal
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo footer-logo">
+                        <span class="logo-peak">PEAK</span>
+                        <span class="logo-internet">INTERNET</span>
+                    </a>
+                    <p>Demand PEAK performance. Delivering reliable gigabit internet to the Willamette Valley since
+                        1999.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Services</h4>
+                        <a href="internet-plans.html#fiber">PEAK Fiber</a>
+                        <a href="internet-plans.html#wireless">Fixed Wireless</a>
+                        <a href="advanced-services.html#wifi">Total Home Wi-Fi</a>
+                        <a href="advanced-services.html#tv">Streaming TV</a>
+                        <a href="business.html">Business Internet</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="support.html">Contact Us</a>
+                        <a href="https://peak.smarthub.coop/Login.html" target="_blank">Pay My Bill</a>
+                        <a href="http://speedtest.peakinternet.com:7076/" target="_blank">Check Speed</a>
+                        <a href="https://www.peakinternet.com/financial-assistance/" target="_blank">Financial
+                            Assistance</a>
+                        <a href="support.html">Tech Support</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="about.html">Our Mission</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="news.html">News</a>
+                        <a href="disclosures.html">Disclosures</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <p>&copy; 2026 PEAK Internet. All rights reserved.</p>
+                <div class="bottom-links">
+                    <a href="disclosures.html">Privacy Policy</a>
+                    <a href="disclosures.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEAK Internet | News & Announcements</title>
+    <meta name="description"
+        content="Stay up to date with the latest news, system updates, and community involvement from PEAK Internet.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .page-header {
+            background-color: var(--color-primary-dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+        }
+
+        .news-section {
+            padding: 80px 0;
+            background-color: var(--color-bg-mute);
+            min-height: 60vh;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .news-image {
+            height: 200px;
+            background-color: var(--color-border);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .news-category {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--color-primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .news-content {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-date {
+            color: var(--color-text-mute);
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .news-title {
+            font-size: 1.25rem;
+            color: var(--color-primary-dark);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            color: var(--color-text-main);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .news-link {
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .news-link:hover {
+            color: var(--color-primary-dark);
+            gap: 12px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 60px;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--color-border);
+            background: white;
+            color: var(--color-text-main);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .page-btn.active {
+            background: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+        }
+
+        .page-btn:hover:not(.active) {
+            background: var(--color-bg-mute);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app-root">
+        <!-- Utility Bar -->
+        <div class="utility-bar">
+            <div class="container utility-content">
+                <div class="utility-left">
+                    <span><i class="ph ph-phone"></i> 24/7 Support: 541-754-PEAK (7325)</span>
+                </div>
+                <div class="utility-right">
+                    <a href="https://webmail.peak.org/" target="_blank"><i class="ph ph-envelope"></i> Web Mail</a>
+                    <a href="https://peak.smarthub.coop/Login.html" target="_blank"><i class="ph ph-user"></i> My Account</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <header class="main-header">
+            <div class="container header-content">
+                <a href="index.html" class="brand-logo">
+                    <span class="logo-peak">PEAK</span>
+                    <span class="logo-internet">INTERNET</span>
+                </a>
+
+                <nav class="main-nav">
+                    <a href="internet-plans.html" class="nav-link">Internet Plans</a>
+                    <a href="advanced-services.html" class="nav-link">TV & Voice</a>
+                    <a href="support.html" class="nav-link">Support</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="https://peak.smarthub.coop/Shop.html" target="_blank" class="btn btn-primary">Check Availability</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="container">
+                    <h1>PEAK News</h1>
+                    <p>Updates, community events, and network enhancements.</p>
+                </div>
+            </section>
+
+            <!-- News Grid -->
+            <section class="news-section">
+                <div class="container">
+                    <div class="news-grid">
+
+                        <!-- Article 1 -->
+                        <article class="news-card animate-on-scroll">
+                            <div class="news-image"
+                                style="background-color: #2F3C7E; background-image: url('assets/fiber.png'); background-blend-mode: multiply;">
+                                <div class="news-category">Case Study</div>
+                                <i class="ph ph-laptop"></i>
+                            </div>
+                            <div class="news-content">
+                                <h3 class="news-title">Making Remote Learning Possible in Rural Oregon</h3>
+                                <p class="news-excerpt">The pandemic served as a perfect acid test for connectivity
+                                    around the world... In the Mid-Willamette Valley area in Oregon, the decades-old,
+                                    substandard home Internet infrastructure stood out in stark relief very quickly.</p>
+                                <a href="https://www.peakinternet.com/devpk/wp-content/uploads/2023/01/Zayo-Case-Study-PEAK-Internet.pdf"
+                                    target="_blank" class="news-link">Read Full Case Study <i
+                                        class="ph ph-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="news-card animate-on-scroll" style="transition-delay: 100ms;">
+                            <div class="news-image" style="background-color: #10B981;">
+                                <div class="news-category">Expansion</div>
+                                <i class="ph ph-globe-hemisphere-west"></i>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-date"><i class="ph ph-calendar-blank"></i> Dec 13, 2022</div>
+                                <h3 class="news-title">PEAK Internet to install fiber optic lines in Lebanon</h3>
+                                <p class="news-excerpt">Linn County Commissioners approved a tax-exempt bond program
+                                    that will help PEAK Internet run more than 101 miles of high-speed fiber optic lines
+                                    in the city of Lebanon, greatly increasing Internet speed opportunities for homes
+                                    and businesses alike.</p>
+                                <a href="#" class="news-link">Read Full Article <i class="ph ph-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 3 -->
+                        <article class="news-card animate-on-scroll" style="transition-delay: 200ms;">
+                            <div class="news-image" style="background-color: #3B82F6;">
+                                <div class="news-category">News</div>
+                                <i class="ph ph-newspaper"></i>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-date"><i class="ph ph-calendar-blank"></i> Nov 23, 2022</div>
+                                <h3 class="news-title">Fiber Internet coming to Lebanon households</h3>
+                                <p class="news-excerpt">Lebanon will be first in the mid-Willamette Valley to get
+                                    enterprise-level fiber-optic internet to every home in city limits. The city signed
+                                    an agreement Nov. 9 with Corvallis-based PEAK Internet that will allow the company
+                                    to start covering Lebanon in fiber lines in 2023.</p>
+                                <a href="https://democratherald.com/business/technology/fiber-internet-coming-to-lebanon-households/article_b0038e7a-6788-11ed-be0a-2ba0bfac0f6a.html"
+                                    target="_blank" class="news-link">Read full article at DemocratHerald.com <i
+                                        class="ph ph-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination animate-on-scroll" style="transition-delay: 300ms;">
+                        <button class="page-btn"><i class="ph ph-caret-left"></i></button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn"><i class="ph ph-caret-right"></i></button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo footer-logo">
+                        <span class="logo-peak">PEAK</span>
+                        <span class="logo-internet">INTERNET</span>
+                    </a>
+                    <p>Demand PEAK performance. Delivering reliable gigabit internet to the Willamette Valley since
+                        1999.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Services</h4>
+                        <a href="internet-plans.html#fiber">PEAK Fiber</a>
+                        <a href="internet-plans.html#wireless">Fixed Wireless</a>
+                        <a href="advanced-services.html#wifi">Total Home Wi-Fi</a>
+                        <a href="advanced-services.html#tv">Streaming TV</a>
+                        <a href="business.html">Business Internet</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="support.html">Contact Us</a>
+                        <a href="https://peak.smarthub.coop/Login.html" target="_blank">Pay My Bill</a>
+                        <a href="http://speedtest.peakinternet.com:7076/" target="_blank">Check Speed</a>
+                        <a href="financial-assistance.html">Financial Assistance</a>
+                        <a href="support.html">Tech Support</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="about.html">Our Mission</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="news.html">News</a>
+                        <a href="disclosures.html">Disclosures</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <p>&copy; 2026 PEAK Internet. All rights reserved.</p>
+                <div class="bottom-links">
+                    <a href="disclosures.html">Privacy Policy</a>
+                    <a href="disclosures.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

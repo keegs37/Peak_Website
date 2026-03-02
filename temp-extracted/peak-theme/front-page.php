@@ -1,0 +1,148 @@
+<?php
+get_header();
+?>
+<main>
+            <section class="hero-section">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <div class="badge">
+                            <i class="ph-fill ph-check-circle"></i> Price for Life Guarantee
+                        </div>
+                        <h1>Gigabit Speeds for the Willamette Valley</h1>
+                        <p>Experience ultra-fast, reliable internet engineered for modern living. No data caps, no
+                            hidden fees, and no annual contracts.</p>
+
+                        <div class="availability-check">
+                            <a href="<?php echo esc_url( home_url( \'/https://peak.smarthub.coop/Shop\' ) ); ?>" target="_blank" class="btn btn-primary"
+                                style="padding: 16px 40px; font-size: 1.25rem;">Check Availability</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-bg-accent"></div>
+            </section>
+
+            <!-- Features Quick-Link Section -->
+            <section class="features-bar">
+                <div class="container features-grid">
+                    <div class="feature-item animate-on-scroll">
+                        <div class="feature-icon"><i class="ph ph-rocket-launch"></i></div>
+                        <div>
+                            <h4>Up to 5 Gig Speeds</h4>
+                            <p>Symmetrical upload & download</p>
+                        </div>
+                    </div>
+                    <div class="feature-item animate-on-scroll" style="transition-delay: 100ms;">
+                        <div class="feature-icon"><i class="ph ph-infinity"></i></div>
+                        <div>
+                            <h4>No Data Caps</h4>
+                            <p>Stream and download endlessly</p>
+                        </div>
+                    </div>
+                    <div class="feature-item animate-on-scroll" style="transition-delay: 200ms;">
+                        <div class="feature-icon"><i class="ph ph-handshake"></i></div>
+                        <div>
+                            <h4>No Contracts</h4>
+                            <p>Cancel anytime with zero fees</p>
+                        </div>
+                    </div>
+                    <div class="feature-item animate-on-scroll" style="transition-delay: 300ms;">
+                        <div class="feature-icon"><i class="ph ph-shield-check"></i></div>
+                        <div>
+                            <h4>Trusted Local Provider</h4>
+                            <p>Serving Oregon since 1999</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Internet Plans Section -->
+            <section class="plans-section animate-on-scroll">
+                <div class="container plans-content">
+                    <div class="section-header text-center">
+                        <h2>Choose Your Connection</h2>
+                        <p>Reliable, high-speed internet delivered through cutting-edge technology.</p>
+                    </div>
+
+                    <div class="pricing-cards">
+                        <!-- Fiber Card -->
+                        <div class="card pricing-card premium">
+                            <div class="card-badge">Most Reliable</div>
+                            <div class="card-icon"><i class="ph ph-lightning"></i></div>
+                            <h3>PEAK Fiber</h3>
+                            <p class="card-subtitle">Speeds from 100Mbps to 1 Gig</p>
+                            <div class="price">
+                                <span class="currency">$</span>
+                                <span class="amount">65</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <p class="price-note">Starting price. Equipment included.</p>
+                            <ul class="plan-features">
+                                <li><i class="ph-fill ph-check-circle"></i> Symmetrical Upload & Download</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Best for 4K streaming & gaming</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Unaffected by weather</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Total Home Wi-Fi Standard Included</li>
+                            </ul>
+                            <button class="btn btn-primary w-full">Check Fiber Availability</button>
+                        </div>
+
+                        <!-- Fixed Wireless Card -->
+                        <div class="card pricing-card">
+                            <div class="card-icon"><i class="ph ph-wifi-high"></i></div>
+                            <h3>Fixed Wireless</h3>
+                            <p class="card-subtitle">Speeds from 3Mbps to 30Mbps</p>
+                            <div class="price" style="margin: 32px 0;">
+                                <span class="currency">$</span>
+                                <span class="amount">45</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="ph-fill ph-check-circle"></i> Expansive local and rural coverage
+                                </li>
+                                <li><i class="ph-fill ph-check-circle"></i> Fast installation process</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Reliable connection</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Total Home Wi-Fi Standard Included</li>
+                            </ul>
+                            <a href="<?php echo esc_url( home_url( \'/https://peak.smarthub.coop/Shop\' ) ); ?>" target="_blank"
+                                class="btn btn-primary w-full" style="justify-content: center;">Check Availability</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advanced Services Section -->
+            <section class="services-section bg-mute animate-on-scroll">
+                <div class="container services-content">
+                    <div class="services-text">
+                        <h2>Complete Your Home Experience</h2>
+                        <p>Upgrade to our premium Total Managed Wi-Fi for larger homes or bundle with Tech Home to
+                            protect all your devices.</p>
+                        <a href="#" class="btn btn-outline dark mt-4">Explore All Services</a>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-box">
+                            <div class="s-icon"><i class="ph ph-router"></i></div>
+                            <h4>Total Home Wi-Fi</h4>
+                            <p>Access and control your home network from your smartphone.</p>
+                        </div>
+                        <div class="service-box">
+                            <div class="s-icon"><i class="ph ph-shield-plus"></i></div>
+                            <h4>Tech Home Support</h4>
+                            <p>Set up, use, and protect your internet-enabled devices easily.</p>
+                        </div>
+                        <div class="service-box">
+                            <div class="s-icon"><i class="ph ph-television"></i></div>
+                            <h4>Streaming TV</h4>
+                            <p>The best in entertainment streaming seamlessly to your home.</p>
+                        </div>
+                        <div class="service-box">
+                            <div class="s-icon"><i class="ph ph-phone-call"></i></div>
+                            <h4>Advanced Voice</h4>
+                            <p>Crystal clear VoIP phone services for residential and business.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+<?php
+get_footer();
+?>

@@ -296,7 +296,6 @@ function peak_footer_services_fallback() {
     echo '<li><a href="' . esc_url( home_url( '/internet-plans#fiber' ) ) . '">PEAK Fiber</a></li>';
     echo '<li><a href="' . esc_url( home_url( '/internet-plans#wireless' ) ) . '">Fixed Wireless</a></li>';
     echo '<li><a href="' . esc_url( home_url( '/advanced-services#wifi' ) ) . '">Total Home Wi-Fi</a></li>';
-    echo '<li><a href="' . esc_url( home_url( '/advanced-services#tv' ) ) . '">Streaming TV</a></li>';
     echo '<li><a href="' . esc_url( home_url( '/business' ) ) . '">Business Internet</a></li>';
     echo '</ul>';
 }
